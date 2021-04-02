@@ -1,0 +1,19 @@
+.header{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav a{
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+.nav a:hover{
+  color: var(--purple);
+}
