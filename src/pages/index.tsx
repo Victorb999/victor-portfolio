@@ -35,11 +35,11 @@ const Card: React.FC<CardProps> = ({
           />
         </div>
         <div className={styles.description}>
-          <a href={link}>
-            <h3>{title}</h3>
-          </a>
-          <h4>{subtitle}</h4>
-          <p>{text}</p>
+          <motion.a href={link} variants={item}>
+            <h3 >{title}</h3>
+          </motion.a>
+          <motion.h4 variants={item}>{subtitle}</motion.h4>
+          <motion.p variants={item}>{text}</motion.p>
         </div>
       </motion.div>
     </Link>
@@ -57,6 +57,14 @@ const variants: Variants = {
     }
   }
 };
+
+const item : Variants =  {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+}
 
 export default function Home() {
   return (
