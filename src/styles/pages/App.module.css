@@ -15,12 +15,34 @@
 
 .back{
   margin-top: 2rem;
+  color: blue;
 }
 
+.description {
+  margin-top: 2rem;
+  margin-left:0rem;
+}
+.description h1{
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+.description a{
+  display: block;
+  margin-bottom: 1rem;
+  color: blue;
+}
+.description p{
+  display: block;
+  margin-bottom: 1rem;
+}
 @media (min-width:800px) {
   .container {
     max-width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .description {
+    margin-top: 0rem;
+    margin-left:2rem;
   }
 }

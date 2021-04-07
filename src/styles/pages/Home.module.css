@@ -21,7 +21,6 @@
 
 .grid {
   display: flex;
-  display: grid;
   grid-template-columns: repeat(1, 1fr);
   flex-basis: 45%;
   align-items: center;
@@ -49,6 +48,7 @@
 
 .imgApp {
   height: 160px;
+  cursor: pointer;
 }
 
 .description {

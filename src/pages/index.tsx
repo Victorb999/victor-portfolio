@@ -51,7 +51,7 @@ const variants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.3,
       delayChildren: 1,
       staggerChildren: 0.7
     }
@@ -78,7 +78,7 @@ export default function Home() {
         <motion.div
           className={styles.grid}
           transition={{
-            delay: 1
+            delay: 0.4
           }}
           variants={variants}
           initial="hidden"

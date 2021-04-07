@@ -30,10 +30,11 @@ const App = ({ dataApp }: AppProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
           className={styles.description}
-        >
-          <p>{dataApp.github}</p>
+        > 
+          <h1>{dataApp.id}</h1>
           <p>{dataApp.text}</p>
-          <p>{dataApp.site}</p>
+          <a href={dataApp.github}>GitHub</a>
+          <a href={dataApp.site}>Demo</a>
         </motion.div>
       </div>
 
@@ -86,20 +87,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let github, text, site;
   if (id == "pokeagenda") {
     github = "https://github.com/Victorb999/PokeAgenda";
-    text = "";
-    site = "";
+    text = "Search every pokemon, types and generation.";
+    site = "https://pokeagenda-8b318.web.app/";
   } else if (id == "lolzinho") {
     github = "https://github.com/Victorb999/LOLzinho";
-    text = "";
-    site = "";
+    text = "Search all champions of League of legends";
+    site = "https://lol-zinho.victorb999.vercel.app";
   } else if (id == "receitastop") {
     github = "https://github.com/Victorb999/ReceitasTopFront";
-    text = "";
-    site = "";
+    text = "A project to calculate prices of recipe";
+    site = "https://receitastop.vercel.app";
   } else if (id == "githubusers") {
     github = "https://github.com/Victorb999/GithubUsers";
-    text = "";
-    site = "";
+    text = "Project to search github user";
+    site = "https://github-users-cyan.vercel.app/";
   }
 
   const data = {
