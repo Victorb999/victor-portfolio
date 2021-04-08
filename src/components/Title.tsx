@@ -26,8 +26,9 @@ const Title: React.FC = () => {
             stiffness: 260,
             damping: 50
           }}
-          href="https://victoraraujo.com.br/"
+          href="https://victorsite-99.web.app/"
           title="site designer"
+          target="_blank"
         >
           <Image src="/img/Icons/web.svg" width={35} height={34} />
         </motion.a>
@@ -41,6 +42,7 @@ const Title: React.FC = () => {
           }}
           href="https://www.github.com/victorb999"
           title="github"
+          target="_blank"
         >
           <Image src="/img/Icons/github.svg" width={35} height={34} />
         </motion.a>
@@ -54,6 +56,7 @@ const Title: React.FC = () => {
           }}
           href="https://www.linkedin.com/in/victorb-araujo/"
           title="linkedin"
+          target="_blank"
         >
           <Image src="/img/Icons/linkedin.svg" width={35} height={34} />
         </motion.a>
@@ -67,6 +70,7 @@ const Title: React.FC = () => {
           }}
           href="https://www.behance.net/victorAraujoDesign"
           title="behance"
+          target="_blank"
         >
           <Image src="/img/Icons/behance.svg" width={35} height={34} />
         </motion.a>

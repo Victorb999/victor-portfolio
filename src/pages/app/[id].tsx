@@ -33,8 +33,9 @@ const App = ({ dataApp }: AppProps) => {
         > 
           <h1>{dataApp.id}</h1>
           <p>{dataApp.text}</p>
-          <a href={dataApp.github}>GitHub</a>
-          <a href={dataApp.site}>Demo</a>
+          
+          <a href={dataApp.github}><i className="fab fa-github"></i> GitHub</a>
+          <a href={dataApp.site}><i className="fab fa-chrome"></i> Demo</a>
         </motion.div>
       </div>
 

@@ -15,7 +15,10 @@
 
 .back{
   margin-top: 2rem;
-  color: blue;
+  color: var(--blue);
+}
+.back:hover{
+  text-decoration: underline;
 }
 
 .description {
@@ -29,7 +32,10 @@
 .description a{
   display: block;
   margin-bottom: 1rem;
-  color: blue;
+  color:  var(--blue);
+}
+.description a:hover{
+  text-decoration: underline;
 }
 .description p{
   display: block;
