@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href="/">
-          <a>portifolio</a>
+          <a>portfolio</a>
         </Link>
         <Image src="/img/logo.svg" width={80} height={58} />
         <Link href="/about">
