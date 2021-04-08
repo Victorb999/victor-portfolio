@@ -22,7 +22,7 @@ const About: React.FC = () => {
          stiffness: 150,
          damping: 100
        }}
-       src="/img/me.svg" alt="Me" className={styles.img}/>
+       src="/img/Me.svg" alt="Me" className={styles.img}/>
       <motion.div
         className={styles.aboutMe}
         transition={{
