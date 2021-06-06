@@ -46,7 +46,7 @@ const App = ({ dataApp }: AppProps) => {
         className={styles.back}
       >
         <Link href="/">
-          <a>Voltar para a Home</a>
+          <a>Back to Home</a>
         </Link>
       </motion.div>
     </div>
