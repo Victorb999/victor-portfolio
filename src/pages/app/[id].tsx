@@ -73,7 +73,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       },
       {
         params: {
-          id: "githubusers"
+          id: "nbastats"
         }
       }
     ],
@@ -98,10 +98,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     github = "https://github.com/Victorb999/ReceitasTopFront";
     text = "A project to calculate prices of recipe";
     site = "https://receitastop.vercel.app";
-  } else if (id == "githubusers") {
-    github = "https://github.com/Victorb999/GithubUsers";
-    text = "Project to search github user";
-    site = "https://github-users-cyan.vercel.app/";
+  } else if (id == "nbastats") {
+    github = "https://github.com/Victorb999/nba-stats";
+    text = "Project in Nextjs to search all NBA teams and players";
+    site = "https://nba-stats-pi.vercel.app/";
   }
 
   const data = {

@@ -111,12 +111,13 @@ export default function Home() {
             link={"https://receitastop.vercel.app"}
           />
           <Card
-            href={"/app/githubusers"}
-            imgSrc={"/img/Apps/githubusers.jpg"}
-            layoutId={"githubusers-app"}
-            title={"GithubUsers"}
-            text={"Project to search github user"}
-            link={"https://github-users-cyan.vercel.app/"}
+            href={"/app/nbastats"}
+            imgSrc={"/img/Apps/nbastats.jpg"}
+            layoutId={"nbastats-app"}
+            title={"NBAstats"}
+            subtitle={"Project in Nextjs"}
+            text={"Search all NBA teams and players"}
+            link={"https://nba-stats-pi.vercel.app/"}
           />
         </motion.div>
       </main>
