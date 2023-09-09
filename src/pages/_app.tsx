@@ -1,17 +1,23 @@
-import { AnimateSharedLayout } from 'framer-motion'
+import { AnimateSharedLayout } from "framer-motion";
 
-import '../styles/globals.css'
+import "../styles/globals.css";
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AnimateSharedLayout>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </AnimateSharedLayout>
-  )
+    <>
+      <Head>
+        <title>My new cool app</title>
+      </Head>
+      <AnimateSharedLayout>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AnimateSharedLayout>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

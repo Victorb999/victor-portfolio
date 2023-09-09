@@ -28,11 +28,10 @@ class MyDocument extends Document {
             content="Victor Araújo is a dev who loves front-end"
           />
           <meta
-            property ="og:title"
+            property="og:title"
             content="Victor Araújo - Front end Developer"
           />
           <meta name="robots" content="index, follow"></meta>
-          <title>Victor Araújo</title>
         </Head>
         <body>
           <Main />
