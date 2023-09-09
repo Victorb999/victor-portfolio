@@ -34,9 +34,7 @@ const Card: React.FC<CardProps> = ({
           />
         </div>
         <div className={styles.description}>
-          <motion.a href={link} variants={item}>
-            <h3>{title}</h3>
-          </motion.a>
+          <motion.h3 variants={item}>{title}</motion.h3>
           <motion.h4 variants={item}>{subtitle}</motion.h4>
           <motion.p variants={item}>{text}</motion.p>
         </div>
