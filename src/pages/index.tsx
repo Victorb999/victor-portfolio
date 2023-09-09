@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Head from "next/head";
 import styles from "../styles/pages/Home.module.css";
 import Link from "next/link";
-import { dataApp } from "./data/appData";
+import { dataApp } from "../data/appData";
 
 import { motion, Variants } from "framer-motion";
 interface CardProps {

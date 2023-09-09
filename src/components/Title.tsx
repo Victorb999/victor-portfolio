@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "../styles/components/Title.module.css";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Title: React.FC = () => {
   return (
@@ -30,7 +30,12 @@ const Title: React.FC = () => {
           title="github"
           target="_blank"
         >
-          <Image src="/img/Icons/github.svg" width={35} height={34} />
+          <Image
+            alt={"github"}
+            src="/img/Icons/github.svg"
+            width={35}
+            height={34}
+          />
         </motion.a>
         <motion.a
           initial={{ scale: 0 }}
@@ -44,7 +49,12 @@ const Title: React.FC = () => {
           title="linkedin"
           target="_blank"
         >
-          <Image src="/img/Icons/linkedin.svg" width={35} height={34} />
+          <Image
+            alt={"linkedin"}
+            src="/img/Icons/linkedin.svg"
+            width={35}
+            height={34}
+          />
         </motion.a>
         <motion.a
           initial={{ scale: 0 }}
@@ -58,7 +68,12 @@ const Title: React.FC = () => {
           title="behance"
           target="_blank"
         >
-          <Image src="/img/Icons/behance.svg" width={35} height={34} />
+          <Image
+            alt={"behance"}
+            src="/img/Icons/behance.svg"
+            width={35}
+            height={34}
+          />
         </motion.a>
       </div>
     </div>

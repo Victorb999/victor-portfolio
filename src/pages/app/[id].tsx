@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import styles from "../../styles/pages/App.module.css";
-import { dataAppPage, Apps } from "../data/appData";
+import { dataAppPage, Apps } from "../../data/appData";
 
 type AppProps = {
   dataApp: Apps;
