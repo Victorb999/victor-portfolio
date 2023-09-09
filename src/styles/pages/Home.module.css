@@ -32,7 +32,7 @@
 
 .card {
   margin: 1rem;
-  background-color: var(--gray1);
+  background-color: var(--purple);
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 90%;
   height: 160px;
@@ -43,7 +43,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  background-color: var(--gray2);
+  background-color: var(--dark-purple);
 }
 
 .imgApp {

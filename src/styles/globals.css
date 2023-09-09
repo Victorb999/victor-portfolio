@@ -23,8 +23,8 @@ button {
   font: 400 1rem "Josefin sans", sans-serif;
 }
 body {
-  background-color: var(--white);
-  color: var(--dark);
+  background-color: var(--dark);
+  color: var(--white);
 }
 button {
   cursor: pointer;

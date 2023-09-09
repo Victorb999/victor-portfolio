@@ -2,24 +2,16 @@ import { motion } from "framer-motion";
 import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import styles from "../../styles/pages/App.module.css";
-
-type Apps = {
-  id: string;
-  img: string;
-  github: string;
-  text: string;
-  site: string;
-};
+import { dataAppPage, Apps } from "../data/appData";
 
 type AppProps = {
   dataApp: Apps;
 };
+
 const App = ({ dataApp }: AppProps) => {
   return (
     <div className={styles.all}>
-      <div
-        className={styles.container}
-      >
+      <div className={styles.container}>
         <motion.img
           src={dataApp.img}
           layoutId={`${dataApp.id}-app`}
@@ -28,14 +20,18 @@ const App = ({ dataApp }: AppProps) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ delay: 0.25, duration: 0.5 }}
           className={styles.description}
-        > 
+        >
           <h1>{dataApp.id}</h1>
           <p>{dataApp.text}</p>
-          
-          <a href={dataApp.github}><i className="fab fa-github"></i> GitHub</a>
-          <a href={dataApp.site}><i className="fab fa-chrome"></i> Demo</a>
+
+          <a href={dataApp.github}>
+            <i className="fab fa-github"></i> GitHub
+          </a>
+          <a href={dataApp.site}>
+            <i className="fab fa-chrome"></i> Demo
+          </a>
         </motion.div>
       </div>
 
@@ -54,69 +50,32 @@ const App = ({ dataApp }: AppProps) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = Object.keys(dataAppPage).map((id) => ({
+    params: {
+      id,
+    },
+  }));
+
   return {
-    paths: [
-      {
-        params: {
-          id: "pokeagenda"
-        }
-      },
-      {
-        params: {
-          id: "lolzinho"
-        }
-      },
-      {
-        params: {
-          id: "receitastop"
-        }
-      },
-      {
-        params: {
-          id: "nbastats"
-        }
-      }
-    ],
-    fallback: "blocking"
+    paths,
+    fallback: "blocking",
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: {
+  params: { id: string };
+}) => {
   const { id } = params;
 
-  const img = `/img/Apps/${id}.jpg`;
-  let github, text, site;
-  if (id == "pokeagenda") {
-    github = "https://github.com/Victorb999/PokeAgenda";
-    text = "Search every pokemon, types and generation.";
-    site = "https://pokeagenda-8b318.web.app/";
-  } else if (id == "lolzinho") {
-    github = "https://github.com/Victorb999/LOLzinho";
-    text = "Search all champions of League of legends";
-    site = "https://lol-zinho.victorb999.vercel.app";
-  } else if (id == "receitastop") {
-    github = "https://github.com/Victorb999/ReceitasTopFront";
-    text = "A project to calculate prices of recipe";
-    site = "https://receitastop.vercel.app";
-  } else if (id == "nbastats") {
-    github = "https://github.com/Victorb999/nba-stats";
-    text = "Project in Nextjs to search all NBA teams and players";
-    site = "https://nba-stats-pi.vercel.app/";
-  }
-
-  const data = {
-    id,
-    img,
-    github,
-    text,
-    site
-  };
+  const app = dataAppPage[id];
 
   return {
     props: {
-      dataApp: data
+      dataApp: app,
     },
-    revalidate: 10
+    revalidate: 10,
   };
 };
 

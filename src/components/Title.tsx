@@ -11,7 +11,7 @@ const Title: React.FC = () => {
         transition={{
           type: "spring",
           stiffness: 150,
-          damping: 100
+          damping: 100,
         }}
         className={styles.titleName}
       >
@@ -24,21 +24,7 @@ const Title: React.FC = () => {
           transition={{
             type: "spring",
             stiffness: 260,
-            damping: 50
-          }}
-          href="https://victorsite-99.web.app/"
-          title="site designer"
-          target="_blank"
-        >
-          <Image src="/img/Icons/web.svg" width={35} height={34} />
-        </motion.a>
-        <motion.a
-          initial={{ scale: 0 }}
-          animate={{ rotate: 360, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 60
+            damping: 60,
           }}
           href="https://www.github.com/victorb999"
           title="github"
@@ -52,7 +38,7 @@ const Title: React.FC = () => {
           transition={{
             type: "spring",
             stiffness: 260,
-            damping: 70
+            damping: 70,
           }}
           href="https://www.linkedin.com/in/victorb-araujo/"
           title="linkedin"
@@ -66,7 +52,7 @@ const Title: React.FC = () => {
           transition={{
             type: "spring",
             stiffness: 260,
-            damping: 80
+            damping: 80,
           }}
           href="https://www.behance.net/victorAraujoDesign"
           title="behance"
