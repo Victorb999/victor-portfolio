@@ -1,47 +1,9 @@
 import Head from "next/head";
-import styles from "../styles/pages/Home.module.css";
-import Link from "next/link";
+import styles from "./styles.module.css";
+import Card from "../components/Card/Card";
 import { dataApp } from "../data/appData";
 
 import { motion, Variants } from "framer-motion";
-interface CardProps {
-  href: string;
-  imgSrc: string;
-  layoutId: string;
-  title: string;
-  subtitle?: string;
-  text: string;
-  link: string;
-}
-
-const Card: React.FC<CardProps> = ({
-  href,
-  imgSrc,
-  layoutId,
-  title,
-  subtitle,
-  text,
-  link,
-}) => {
-  return (
-    <Link href={href}>
-      <motion.div className={styles.card} variants={variants}>
-        <div className={styles.image}>
-          <motion.img
-            src={imgSrc}
-            layoutId={layoutId}
-            className={styles.imgApp}
-          />
-        </div>
-        <div className={styles.description}>
-          <motion.h3 variants={item}>{title}</motion.h3>
-          <motion.h4 variants={item}>{subtitle}</motion.h4>
-          <motion.p variants={item}>{text}</motion.p>
-        </div>
-      </motion.div>
-    </Link>
-  );
-};
 
 const variants: Variants = {
   hidden: { opacity: 0 },

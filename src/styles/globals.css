@@ -42,12 +42,6 @@ a {
 a:hover {
   color: var(--purple);
 }
-.header {
-  width: 95vh;
-}
-.body {
-  display: flex;
-}
 
 @media (max-width: 1080px) {
   html {
