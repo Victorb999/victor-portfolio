@@ -16,6 +16,7 @@
 
 .imgApp {
   height: 12rem;
+  width: 12rem;
   cursor: pointer;
   border-radius: 1rem;
 }
