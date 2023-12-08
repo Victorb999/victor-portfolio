@@ -6,10 +6,10 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
+        <Image src="/img/logo.svg" width={80} height={58} alt="Logo" />
         <Link href="/">
           <span>portfolio</span>
         </Link>
-        <Image src="/img/logo.svg" width={80} height={58} alt="Logo" />
         <Link href="/about">
           <span>about</span>
         </Link>
