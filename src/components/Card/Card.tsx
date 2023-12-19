@@ -16,10 +16,15 @@ const variants: Variants = {
 };
 
 const item: Variants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: -30, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 0.3,
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
   },
 };
 
@@ -58,11 +63,16 @@ const Card: React.FC<CardProps> = ({
           />
         </div>
         {showDescription && (
-          <div className={styles.description}>
-            <motion.h3 variants={item}>{title}</motion.h3>
-            <motion.h4 variants={item}>{subtitle}</motion.h4>
-            <motion.p variants={item}>{text}</motion.p>
-          </div>
+          <motion.div
+            className={styles.description}
+            initial="hidden"
+            animate="visible"
+            variants={item}
+          >
+            <h3>{title}</h3>
+            <h4>{subtitle}</h4>
+            <p>{text}</p>
+          </motion.div>
         )}
       </motion.div>
     </Link>

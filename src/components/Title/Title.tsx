@@ -1,81 +1,37 @@
-import Image from "next/image";
 import styles from "./styles.module.css";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import Social from "../Social/Social";
+import AnimeText from "./AnimeText";
+
+const item: Variants = {
+  hidden: { x: -30, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+      delay: 7.5,
+    },
+  },
+};
 
 const Title: React.FC = () => {
   return (
     <div className={styles.title}>
-      <motion.div
-        initial={{ x: -100 }}
-        animate={{ x: 0, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 150,
-          damping: 100,
-        }}
-        className={styles.titleName}
-      >
-        <h1>Victor Araújo</h1>
+      <motion.div className={styles.titleName}>
+        <div className={styles.titleNameFlex}>
+          <AnimeText delay={1} baseText="Victor" cursor={"BEGIN"} />
+        </div>
+        <div className={styles.titleNameFlex}>
+          <AnimeText delay={4} baseText="Araújo" cursor={"END"} />
+        </div>
+        <motion.h3 initial="hidden" animate="visible" variants={item}>
+          Front-end developer
+        </motion.h3>
       </motion.div>
-      <div className={styles.social}>
-        <motion.a
-          initial={{ scale: 0 }}
-          animate={{ rotate: 360, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 60,
-          }}
-          href="https://www.github.com/victorb999"
-          title="github"
-          target="_blank"
-        >
-          <Image
-            alt={"github"}
-            src="/img/Icons/github.svg"
-            width={35}
-            height={34}
-          />
-        </motion.a>
-        <motion.a
-          initial={{ scale: 0 }}
-          animate={{ rotate: 360, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 70,
-          }}
-          href="https://www.linkedin.com/in/victorb-araujo/"
-          title="linkedin"
-          target="_blank"
-        >
-          <Image
-            alt={"linkedin"}
-            src="/img/Icons/linkedin.svg"
-            width={35}
-            height={34}
-          />
-        </motion.a>
-        <motion.a
-          initial={{ scale: 0 }}
-          animate={{ rotate: 360, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 80,
-          }}
-          href="https://www.behance.net/victorAraujoDesign"
-          title="behance"
-          target="_blank"
-        >
-          <Image
-            alt={"behance"}
-            src="/img/Icons/behance.svg"
-            width={35}
-            height={34}
-          />
-        </motion.a>
-      </div>
+      <Social />
     </div>
   );
 };

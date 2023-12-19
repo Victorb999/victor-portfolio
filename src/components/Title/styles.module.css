@@ -11,26 +11,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  flex-direction: column;
+  width: 80%;
 }
 .titleName h1 {
   font-weight: bold;
   font-size: 4.5rem;
+  word-break: normal;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
-.social {
+.titleName h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--blue);
+}
+.titleNameFlex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  width: 60%;
-  margin-top: 2rem;
-  transition: 2s;
+  flex-direction: row;
 }
-.social a:hover {
-  opacity: 0.6;
+
+.cursor {
+  height: 4rem;
+  transform: translateY(0.25rem);
+  width: 1px;
+  background-color: #1f2933;
 }
+
 @media (min-width: 1080px) {
   .social {
     width: 30%;

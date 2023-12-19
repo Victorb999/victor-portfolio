@@ -38,6 +38,9 @@
   }
 }
 @media (max-width: 400px) {
+  .grid {
+    display: flex;
+  }
   .description {
     padding-left: 0.85rem;
   }
