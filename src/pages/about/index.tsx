@@ -22,7 +22,7 @@ const About: React.FC = () => {
           stiffness: 150,
           damping: 100,
         }}
-        src="/img/Me.svg"
+        src="/img/me.jpeg"
         alt="Me"
         className={styles.img}
       />

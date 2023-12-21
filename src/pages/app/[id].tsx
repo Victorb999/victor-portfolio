@@ -20,7 +20,7 @@ const App = ({ dataApp }: AppProps) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.25, duration: 0.5 }}
+          transition={{ delay: 0.25, duration: 1 }}
           className={styles.description}
         >
           <h1>{dataApp.id}</h1>
