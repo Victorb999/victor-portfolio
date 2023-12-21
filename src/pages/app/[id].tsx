@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
-import styles from "../../styles/pages/App.module.css";
+import styles from "./styles.module.css";
 import { dataAppPage, Apps } from "../../data/appData";
 
 type AppProps = {
@@ -20,7 +20,7 @@ const App = ({ dataApp }: AppProps) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.25, duration: 0.5 }}
+          transition={{ delay: 0.25, duration: 1 }}
           className={styles.description}
         >
           <h1>{dataApp.id}</h1>

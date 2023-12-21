@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap");
 
 :root {
   --white: #fff;
-  --gray: #8BA2AE;
-  --gray1: #F5F5F5;
-  --gray2: #E5E5E5;
+  --gray: #8ba2ae;
+  --gray1: #f5f5f5;
+  --gray2: #e5e5e5;
   --dark: #050410;
-  --purple: #311B63;
-  --dark-purple:#33324D;
-  --red: #DF3335;
-  --blue: #2F52E0;
+  --purple: #311b63;
+  --dark-purple: #33324d;
+  --red: #df3335;
+  --blue: #2f52e0;
 }
 * {
   margin: 0;
@@ -20,11 +20,17 @@ body,
 input,
 textarea,
 button {
-  font: 400 1rem "Josefin sans", sans-serif;
+  font:
+    400 1rem "Josefin sans",
+    sans-serif;
 }
 body {
   background-color: var(--dark);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 button {
   cursor: pointer;
@@ -33,7 +39,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: var(--purple);
 }
 
