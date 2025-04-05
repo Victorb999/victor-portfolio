@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
   justify-content: center;
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8)
+    rgba(0, 0, 0, 0.3)
   );
   position: absolute;
   top: 0;
@@ -15,38 +16,79 @@
   height: 100dvh;
 }
 .container {
+  background-color: var(--purple);
+  background: linear-gradient(140deg, rgba(49,27,99,1) 0%, rgba(167,19,219,1) 48%, rgba(0,139,228,1) 100%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.content{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--purple);
-  border-radius: 0.5rem;
+  gap: 1rem;
+  width: 100%;
+  border: 1px solid var(--gray);
+  background-color: #05041033;
   padding: 1rem;
+  border-radius: 0.5rem;
+}
+.title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #05041033;
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.links{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;  
+  width: 80%;
+}
+.links a {
+  background-color: #05041033;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+.links a svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .img {
   width: 80%;
   border-radius: 1rem;
 }
 
-.back {
-  margin-top: 2rem;
-  color: var(--blue);
-}
-.back:hover {
-  text-decoration: underline;
+.container h1 {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .description {
-  margin-top: 2rem;
-  margin-left: 0rem;
-}
-.description h1 {
-  margin-bottom: 2rem;
-  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;  
+  background-color: #05041033;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 .description a {
   display: block;
-  margin-bottom: 1rem;
   color: var(--blue);
 }
 .description a:hover {
@@ -54,17 +96,14 @@
 }
 .description p {
   display: block;
-  margin-bottom: 1rem;
 }
 @media (min-width: 600px) {
   .container {
-    max-width: 90%;
-    flex-direction: row;
     gap: 1rem;
   }
   .description {
+    width: 80%;
     margin-top: 0rem;
-    margin-left: 2rem;
   }
   .img {
     max-width: 350px;
