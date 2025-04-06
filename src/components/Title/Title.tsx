@@ -1,7 +1,8 @@
-import styles from "./styles.module.css";
-import { motion, Variants } from "framer-motion";
-import Social from "../Social/Social";
-import AnimeText from "./AnimeText";
+"use client"
+import styles from "./styles.module.css"
+import { motion, Variants } from "framer-motion"
+import Social from "../Social/Social"
+import AnimeText from "./AnimeText"
 
 const item: Variants = {
   hidden: { x: -30, opacity: 0 },
@@ -15,7 +16,7 @@ const item: Variants = {
       delay: 7.5,
     },
   },
-};
+}
 
 const Title: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ const Title: React.FC = () => {
       </motion.div>
       <Social />
     </div>
-  );
-};
+  )
+}
 
-export default Title;
+export default Title

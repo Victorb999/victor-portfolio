@@ -1,12 +1,12 @@
 interface dataApp {
-  href: string;
-  imgSrc: string;
-  layoutId: string;
-  title: string;
-  subtitle?: string;
-  text: string;
-  link: string;
-  id: number;
+  href: string
+  imgSrc: string
+  layoutId: string
+  title: string
+  subtitle?: string
+  text: string
+  link: string
+  id: number
 }
 export const dataApp: dataApp[] = [
   {
@@ -48,15 +48,37 @@ export const dataApp: dataApp[] = [
     text: "Search animes as filtered by title or genre",
     link: "https://anime-top-gray.vercel.app/",
   },
-];
+  {
+    id: 5,
+    href: "/app/projetolojatop",
+    imgSrc: "/img/Apps/projetoLoja.png",
+    layoutId: "projeto-loja-top",
+    title: "Loja Top",
+    subtitle: "Project full stack in Nextjs 14 + Node + Prisma",
+    text: "Create products, customers and orders",
+    link: "https://projeto-loja-top.vercel.app/",
+  },
+  {
+    id: 6,
+    href: "/app/yugitop",
+    imgSrc: "/img/Apps/yugitop.png",
+    layoutId: "yugitop",
+    title: "YugiTop.",
+    subtitle: "Project in react + vite + tailwind",
+    text: "Search yugioh cards",
+    link: "https://yugi-cards-top.vercel.app/",
+  },
+]
 
 export type Apps = {
-  id: string;
-  img: string;
-  github: string;
-  text: string;
-  site: string;
-};
+  id: string
+  img: string
+  github: string
+  text: string
+  site: string
+  title: string
+  logo?: string
+}
 
 export const dataAppPage: Record<string, Apps> = {
   pokeagenda: {
@@ -65,6 +87,8 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/PokeAgenda",
     text: "Search every pokemon, types and generation.",
     site: "https://pokeagenda-8b318.web.app/",
+    title: "PokeAgenda",
+    logo: "/img/AppLogos/pokeagenda.png",
   },
   lolzinho: {
     id: "lolzinho",
@@ -72,6 +96,8 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/LOLzinho",
     text: "Search all champions of League of legends",
     site: "https://lol-zinho.victorb999.vercel.app",
+    title: "LOLzinho",
+    logo: "/img/AppLogos/lolzinho.svg",
   },
   receitastop: {
     id: "receitastop",
@@ -79,6 +105,8 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/ReceitasTopFront",
     text: "A project to calculate prices of recipe",
     site: "https://receitastop.vercel.app",
+    title: "ReceitasTop",
+    logo: "/img/AppLogos/receitastop.svg",
   },
   animetop: {
     id: "animetop",
@@ -86,5 +114,25 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/anime-top",
     text: "Project in Nextjs 13 + Tailwind + Zustand",
     site: "https://anime-top-gray.vercel.app/",
+    title: "Anime Top",
+    logo: "/img/AppLogos/animetop.svg",
   },
-};
+  projetolojatop: {
+    id: "projetolojatop",
+    img: "/img/Apps/projetoLoja.png",
+    github: "https://github.com/Victorb999/projeto-loja-top",
+    text: "Project in Nextjs 14 + Tailwind + Node + Prisma",
+    site: "https://projeto-loja-top.vercel.app/",
+    title: "Loja Top",
+    logo: "/img/AppLogos/projetolojatop.svg",
+  },
+  yugitop: {
+    id: "yugitop",
+    img: "/img/Apps/yugitop.png",
+    github: "https://github.com/Victorb999/YugiCardsTop",
+    text: "Search Yu GI OH cards",
+    site: "https://yugi-cards-top.vercel.app/",
+    title: "YugiTop",
+    logo: "/img/AppLogos/yugi.png",
+  },
+}
