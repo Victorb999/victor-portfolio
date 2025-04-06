@@ -1,12 +1,12 @@
 interface dataApp {
-  href: string;
-  imgSrc: string;
-  layoutId: string;
-  title: string;
-  subtitle?: string;
-  text: string;
-  link: string;
-  id: number;
+  href: string
+  imgSrc: string
+  layoutId: string
+  title: string
+  subtitle?: string
+  text: string
+  link: string
+  id: number
 }
 export const dataApp: dataApp[] = [
   {
@@ -48,15 +48,36 @@ export const dataApp: dataApp[] = [
     text: "Search animes as filtered by title or genre",
     link: "https://anime-top-gray.vercel.app/",
   },
-];
+  {
+    id: 5,
+    href: "/app/projetolojatop",
+    imgSrc: "/img/Apps/projetoLoja.png",
+    layoutId: "projeto-loja-top",
+    title: "Projeto Loja Top",
+    subtitle: "Project in Nextjs 14 + Tailwind + Node + Prisma",
+    text: "Create products, customers and orders",
+    link: "https://projeto-loja-top.vercel.app/",
+  },
+  {
+    id: 6,
+    href: "/app/githubusers",
+    imgSrc: "/img/Apps/githubusers.jpg",
+    layoutId: "githubusers",
+    title: "Github Users",
+    subtitle: "Project in vue3 + vuex4",
+    text: "Search github users",
+    link: "https://github-users-cyan.vercel.app/",
+  },
+]
 
 export type Apps = {
-  id: string;
-  img: string;
-  github: string;
-  text: string;
-  site: string;
-};
+  id: string
+  img: string
+  github: string
+  text: string
+  site: string
+  title: string
+}
 
 export const dataAppPage: Record<string, Apps> = {
   pokeagenda: {
@@ -65,6 +86,7 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/PokeAgenda",
     text: "Search every pokemon, types and generation.",
     site: "https://pokeagenda-8b318.web.app/",
+    title: "PokeAgenda",
   },
   lolzinho: {
     id: "lolzinho",
@@ -72,6 +94,7 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/LOLzinho",
     text: "Search all champions of League of legends",
     site: "https://lol-zinho.victorb999.vercel.app",
+    title: "LOLzinho",
   },
   receitastop: {
     id: "receitastop",
@@ -79,6 +102,7 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/ReceitasTopFront",
     text: "A project to calculate prices of recipe",
     site: "https://receitastop.vercel.app",
+    title: "ReceitasTop",
   },
   animetop: {
     id: "animetop",
@@ -86,5 +110,22 @@ export const dataAppPage: Record<string, Apps> = {
     github: "https://github.com/Victorb999/anime-top",
     text: "Project in Nextjs 13 + Tailwind + Zustand",
     site: "https://anime-top-gray.vercel.app/",
+    title: "Anime Top",
   },
-};
+  projetolojatop: {
+    id: "projetolojatop",
+    img: "/img/Apps/projetoLoja.png",
+    github: "https://github.com/Victorb999/projeto-loja-top",
+    text: "Project in Nextjs 14 + Tailwind + Node + Prisma",
+    site: "https://projeto-loja-top.vercel.app/",
+    title: "Projeto Loja Top",
+  },
+  githubusers: {
+    id: "githubusers",
+    img: "/img/Apps/githubusers.jpg",
+    github: "https://github.com/Victorb999/GithubUsers",
+    text: "Search github users",
+    site: "https://github-users-cyan.vercel.app/",
+    title: "Github Users",
+  },
+}

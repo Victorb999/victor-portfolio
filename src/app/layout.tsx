@@ -5,6 +5,14 @@ import Title from "../components/Title/Title"
 import "./globals.css"
 import styles from "./styles.module.css"
 
+import { Josefin_Sans } from "next/font/google"
+
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  variable: "--font-josefin",
+  display: "swap",
+})
+
 export const metadata: Metadata = {
   title: "Victor Araújo - Front end Developer",
   authors: [{ name: "Victor Araújo", url: "http://victoraraujo.com.br" }],
@@ -33,11 +41,10 @@ export const metadata: Metadata = {
     description: "Victor Araújo is a dev who loves front-end",
   },
   icons: {
-    icon: "/logo-s.svg",
-    shortcut: "/logo-s.svg",
-    apple: "/logo-s.svg",
+    icon: "logo.svg",
+    shortcut: "logo.svg",
+    apple: "logo.svg",
   },
-  manifest: "/manifest.json",
   robots: {
     index: true,
     follow: true,
@@ -54,7 +61,7 @@ export default function RootLayout({
       <head>
         <meta name="robots" content="index, follow"></meta>
       </head>
-      <body>
+      <body className={josefin.className}>
         <div className={styles.header}>
           <Header />
           <div className={styles.body}>

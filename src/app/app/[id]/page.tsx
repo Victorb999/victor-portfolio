@@ -19,7 +19,6 @@ export default function appPage(props: AppProps) {
   const { id } = React.use(props.params)
 
   const dataApp: Apps = dataAppPage[id]
-  console.log("dataApp", dataApp)
 
   if (!dataApp) {
     return <div>App not found</div>
@@ -33,7 +32,7 @@ export default function appPage(props: AppProps) {
             <div className={styles.title}>
               <h1>
                 <GlobeIcon />
-                {dataApp.id}
+                {dataApp.title}
               </h1>
             </div>
             <motion.img
