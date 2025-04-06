@@ -5,11 +5,7 @@ import styles from "./styles.module.css"
 import { dataAppPage, Apps } from "../../../data/appData"
 import * as React from "react"
 import { CardApp } from "@/components/CardApp/CardApp"
-import {
-  GitHubLogoIcon,
-  ExternalLinkIcon,
-  GlobeIcon,
-} from "@radix-ui/react-icons"
+import { GitHubLogoIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
 
 type AppProps = {
   params: Promise<{ id: string }>
@@ -30,10 +26,12 @@ export default function appPage(props: AppProps) {
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.title}>
-              <h1>
-                <GlobeIcon />
-                {dataApp.title}
-              </h1>
+              <img
+                src={dataApp.logo}
+                alt={dataApp.title}
+                className={styles.logo}
+              />
+              <h1>{dataApp.title}</h1>
             </div>
             <motion.img
               src={dataApp.img}

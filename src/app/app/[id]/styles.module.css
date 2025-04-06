@@ -40,6 +40,7 @@
   width: 80%;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  gap: 1rem;
 }
 .links{
   display: flex;
@@ -52,7 +53,7 @@
   background-color: #05041033;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  color: var(--blue);
+  color: #3FD8FA;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -68,6 +69,10 @@
 .img {
   width: 80%;
   border-radius: 1rem;
+}
+.logo{
+  width: 2rem;
+  height: 2rem;
 }
 
 .container h1 {

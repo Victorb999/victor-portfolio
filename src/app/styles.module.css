@@ -118,7 +118,7 @@
   height: 1em;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .grid {
     max-width: 90%;
     display: grid;
