@@ -47,10 +47,10 @@ export default function appPage(props: AppProps) {
               <p>{dataApp.text}</p>
             </motion.div>
             <div className={styles.links}>
-              <a href={dataApp.github}>
+              <a href={dataApp.github} target="_blank" rel="noreferrer">
                 <GitHubLogoIcon /> <span>Github</span>
               </a>
-              <a href={dataApp.site}>
+              <a href={dataApp.site} target="_blank" rel="noreferrer">
                 <ExternalLinkIcon /> <span>Demo</span>
               </a>
             </div>

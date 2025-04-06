@@ -60,13 +60,13 @@ export const dataApp: dataApp[] = [
   },
   {
     id: 6,
-    href: "/app/githubusers",
-    imgSrc: "/img/Apps/githubusers.jpg",
-    layoutId: "githubusers",
-    title: "Github Users",
-    subtitle: "Project in vue3 + vuex4",
-    text: "Search github users",
-    link: "https://github-users-cyan.vercel.app/",
+    href: "/app/yugitop",
+    imgSrc: "/img/Apps/yugitop.png",
+    layoutId: "yugitop",
+    title: "YugiTop.",
+    subtitle: "Project in react + vite + tailwind",
+    text: "Search yugioh cards",
+    link: "https://yugi-cards-top.vercel.app/",
   },
 ]
 
@@ -126,13 +126,13 @@ export const dataAppPage: Record<string, Apps> = {
     title: "Loja Top",
     logo: "/img/AppLogos/projetolojatop.svg",
   },
-  githubusers: {
-    id: "githubusers",
-    img: "/img/Apps/githubusers.jpg",
-    github: "https://github.com/Victorb999/GithubUsers",
-    text: "Search github users",
-    site: "https://github-users-cyan.vercel.app/",
-    title: "Github Users",
-    logo: "/img/AppLogos/githubusers.png",
+  yugitop: {
+    id: "yugitop",
+    img: "/img/Apps/yugitop.png",
+    github: "https://github.com/Victorb999/YugiCardsTop",
+    text: "Search Yu GI OH cards",
+    site: "https://yugi-cards-top.vercel.app/",
+    title: "YugiTop",
+    logo: "/img/AppLogos/yugi.png",
   },
 }
