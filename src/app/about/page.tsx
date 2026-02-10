@@ -1,5 +1,6 @@
-import styles from "./styles.module.css";
-import { motion, Variants } from "framer-motion";
+"use client"
+import styles from "./styles.module.css"
+import { motion, Variants } from "framer-motion"
 const variants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -10,8 +11,8 @@ const variants: Variants = {
       staggerChildren: 0.7,
     },
   },
-};
-const About: React.FC = () => {
+}
+export default function About() {
   return (
     <div className={styles.container}>
       <motion.img
@@ -41,7 +42,5 @@ const About: React.FC = () => {
         my projects.
       </motion.div>
     </div>
-  );
-};
-
-export default About;
+  )
+}

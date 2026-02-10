@@ -1,7 +1,8 @@
-import Link from "next/link";
-import styles from "./styles.module.css";
-import { useState } from "react";
-import { motion, Variants } from "framer-motion";
+"use client"
+import Link from "next/link"
+import styles from "./styles.module.css"
+import { useState } from "react"
+import { motion, Variants } from "framer-motion"
 
 const variants: Variants = {
   hidden: { opacity: 0 },
@@ -13,7 +14,7 @@ const variants: Variants = {
       staggerChildren: 0.5,
     },
   },
-};
+}
 
 const item: Variants = {
   hidden: { y: -30, opacity: 0 },
@@ -26,16 +27,16 @@ const item: Variants = {
       staggerChildren: 0.2,
     },
   },
-};
+}
 
 interface CardProps {
-  href: string;
-  imgSrc: string;
-  layoutId: string;
-  title: string;
-  subtitle?: string;
-  text: string;
-  link: string;
+  href: string
+  imgSrc: string
+  layoutId: string
+  title: string
+  subtitle?: string
+  text: string
+  link: string
 }
 
 const Card: React.FC<CardProps> = ({
@@ -46,7 +47,7 @@ const Card: React.FC<CardProps> = ({
   subtitle,
   text,
 }) => {
-  const [showDescription, setShowDescription] = useState(false);
+  const [showDescription, setShowDescription] = useState(false)
   return (
     <Link href={href}>
       <motion.div
@@ -76,7 +77,7 @@ const Card: React.FC<CardProps> = ({
         )}
       </motion.div>
     </Link>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
