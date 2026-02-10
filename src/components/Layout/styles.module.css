@@ -1,15 +1,35 @@
-.header {
-  width: 95vh;
+.mainWrapper {
+  margin-left: 280px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
 }
+
+.header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
 .body {
   display: flex;
   gap: 20%;
 }
-@media (max-width: 800px) {
+
+@media (max-width: 768px) {
+  .mainWrapper {
+    margin-left: 0;
+  }
+
   .body {
     flex-direction: column;
   }
+
   .header {
     width: 100%;
+    padding: 1rem;
   }
 }

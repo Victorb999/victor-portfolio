@@ -1,4 +1,4 @@
-import Header from "../Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
 import Title from "../Title/Title";
 import Footer from "../Footer/Footer";
 
@@ -12,14 +12,18 @@ const Layout: React.FC<LayoutProps> = ({
   children,
 }: LayoutProps): React.ReactElement => {
   return (
-    <div className={styles.header}>
-      <Header />
-      <div className={styles.body}>
-        <Title />
-        {children}
+    <>
+      <Sidebar />
+      <div className={styles.mainWrapper}>
+        <div className={styles.header}>
+          <div className={styles.body}>
+            <Title />
+            {children}
+          </div>
+          <Footer />
+        </div>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
