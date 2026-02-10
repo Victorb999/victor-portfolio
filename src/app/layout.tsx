@@ -6,6 +6,7 @@ import "./globals.css"
 import styles from "./styles.module.css"
 
 import { Josefin_Sans } from "next/font/google"
+import Sidebar from "@/components/Sidebar/Sidebar"
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -63,7 +64,7 @@ export default function RootLayout({
       </head>
       <body className={josefin.className}>
         <div className={styles.header}>
-          <Header />
+          <Sidebar />
           <div className={styles.body}>
             <Title />
             {children}
