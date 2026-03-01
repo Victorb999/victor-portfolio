@@ -7,6 +7,7 @@ interface dataApp {
   text: string
   link: string
   id: number
+  logo?: string
 }
 export const dataApp: dataApp[] = [
   {
@@ -18,6 +19,7 @@ export const dataApp: dataApp[] = [
     subtitle: "A Pokedex made with vue3 + ts",
     text: "Search every pokemon, types and generation.",
     link: "https://pokeagenda-8b318.web.app/",
+    logo: "/img/AppLogos/pokeagenda.png",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ export const dataApp: dataApp[] = [
     subtitle: "A wiki lol champions made with vue + vuetify",
     text: "Search all champions of League of legends",
     link: "https://lol-zinho.victorb999.vercel.app",
+    logo: "/img/AppLogos/lolzinho.svg",
   },
   {
     id: 3,
@@ -37,6 +40,7 @@ export const dataApp: dataApp[] = [
     title: "ReceitasTop",
     text: "A project to calculate prices of recipe",
     link: "https://receitastop.vercel.app",
+    logo: "/img/AppLogos/receitastop.svg",
   },
   {
     id: 4,
@@ -47,6 +51,7 @@ export const dataApp: dataApp[] = [
     subtitle: "Project in Nextjs 13 + Tailwind + Zustand",
     text: "Search animes as filtered by title or genre",
     link: "https://anime-top-gray.vercel.app/",
+    logo: "/img/AppLogos/animetop.svg",
   },
   {
     id: 5,
@@ -57,6 +62,7 @@ export const dataApp: dataApp[] = [
     subtitle: "Project full stack in Nextjs 14 + Node + Prisma",
     text: "Create products, customers and orders",
     link: "https://projeto-loja-top.vercel.app/",
+    logo: "/img/AppLogos/projetolojatop.svg",
   },
   {
     id: 6,
@@ -67,6 +73,7 @@ export const dataApp: dataApp[] = [
     subtitle: "Project in react + vite + tailwind",
     text: "Search yugioh cards",
     link: "https://yugi-cards-top.vercel.app/",
+    logo: "/img/AppLogos/yugi.png",
   },
 ]
 

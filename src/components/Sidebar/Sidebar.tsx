@@ -47,12 +47,13 @@ export default function Sidebar() {
                                         href={project.href}
                                         className={styles.projectLink}
                                         onClick={() => setIsOpen(false)}
+                                        style={{ '--bg-image': `url(${project.imgSrc})` } as React.CSSProperties}
                                     >
-                                        <div className={styles.projectIcon}>
-                                            <span className={styles.iconText}>
-                                                {project.title.substring(0, 2).toUpperCase()}
-                                            </span>
-                                        </div>
+                                        <img
+                                            src={project.logo}
+                                            alt={`${project.title} logo`}
+                                            className={styles.projectLogo}
+                                        />
                                         <span className={styles.projectName}>{project.title}</span>
                                     </Link>
                                 </li>

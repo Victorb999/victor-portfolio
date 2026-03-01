@@ -66,7 +66,7 @@ export default function RootLayout({
         <div className={styles.header}>
           <Sidebar />
           <div className={styles.body}>
-            <Title />
+
             {children}
           </div>
           <Footer />

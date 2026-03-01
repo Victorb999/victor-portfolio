@@ -8,6 +8,8 @@
     font-family: "Courier New", Courier, monospace;
     margin: 2rem 0;
     transition: all 0.3s ease;
+    min-height: 400px;
+    width: 600px;
 }
 
 .terminal:hover {
@@ -120,5 +122,11 @@
 
     .terminalTitle {
         font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .terminal {
+        width: 100%;
     }
 }

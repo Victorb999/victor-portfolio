@@ -4,6 +4,7 @@ import Card from "../components/Card/Card"
 import { dataApp } from "../data/appData"
 
 import { motion, Variants } from "framer-motion"
+import Title from "@/components/Title/Title"
 
 const variants: Variants = {
   hidden: { opacity: 0 },
@@ -26,28 +27,31 @@ const item: Variants = {
 
 export default function Home() {
   return (
-    <div className={styles.container2}>
-      <main className={styles.main2}>
-        <motion.div
-          className={styles.grid}
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-        >
-          {dataApp.map((card) => (
-            <Card
-              key={card.id}
-              href={card.href}
-              imgSrc={card.imgSrc}
-              layoutId={card.layoutId}
-              title={card.title}
-              subtitle={card.subtitle}
-              text={card.text}
-              link={card.link}
-            />
-          ))}
-        </motion.div>
-      </main>
+    <div className={styles.main}>
+      <Title />
+      <div className={styles.container2}>
+        <main className={styles.main2}>
+          <motion.div
+            className={styles.grid}
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+          >
+            {dataApp.map((card) => (
+              <Card
+                key={card.id}
+                href={card.href}
+                imgSrc={card.imgSrc}
+                layoutId={card.layoutId}
+                title={card.title}
+                subtitle={card.subtitle}
+                text={card.text}
+                link={card.link}
+              />
+            ))}
+          </motion.div>
+        </main>
+      </div>
     </div>
   )
 }

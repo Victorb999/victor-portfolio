@@ -4,12 +4,10 @@
   top: 0;
   height: 100vh;
   width: 280px;
-  background: linear-gradient(
-    180deg,
-    rgba(5, 4, 16, 0.95) 0%,
-    rgba(49, 27, 99, 0.85) 100%
-  );
-  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg,
+      rgba(5, 4, 16, 0.95) 0%,
+      rgba(49, 27, 99, 0.85) 100%);
+  /*backdrop-filter: blur(10px);*/
   border-right: 2px solid var(--purple);
   display: flex;
   flex-direction: column;
@@ -44,10 +42,12 @@
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.6;
   }
@@ -105,6 +105,10 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid transparent;
 }
 
 .projectLink::before {
@@ -117,45 +121,39 @@
   background: var(--blue);
   transform: scaleY(0);
   transition: transform 0.2s ease;
+  z-index: 2;
 }
 
 .projectLink:hover {
-  background: rgba(47, 82, 224, 0.15);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg-image);
   transform: translateX(4px);
+  border-color: rgba(47, 82, 224, 0.3);
+  color: #f8f9fa;
 }
 
 .projectLink:hover::before {
   transform: scaleY(1);
 }
 
-.projectIcon {
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.projectLogo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
   flex-shrink: 0;
-  border: 1px solid rgba(47, 82, 224, 0.3);
   transition: all 0.2s ease;
+  z-index: 1;
 }
 
-.projectLink:hover .projectIcon {
+.projectLink:hover .projectLogo {
   transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(47, 82, 224, 0.5);
-}
-
-.iconText {
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: var(--white);
-  font-family: "Courier New", monospace;
+  filter: drop-shadow(0 0 8px rgba(47, 82, 224, 0.5));
 }
 
 .projectName {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: bold;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .navList {
@@ -177,6 +175,7 @@
 .navLink:hover {
   background: rgba(47, 82, 224, 0.15);
   transform: translateX(4px);
+  color: #f8f9fa;
 }
 
 .navIcon {
@@ -225,6 +224,7 @@
   background: rgba(47, 82, 224, 0.25);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(47, 82, 224, 0.4);
+  color: #f8f9fa;
 }
 
 .socialIcon {
