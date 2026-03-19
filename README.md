@@ -1,34 +1,165 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Victor Araújo - Portfólio 🚀
 
-## Getting Started
+Um portfólio moderno e responsivo desenvolvido com **Next.js 15**, **React 19** e **TypeScript**, apresentando projetos pessoais e habilidades de desenvolvimento front-end.
 
-First, run the development server:
+**Link:** [victoraraujo.com.br](http://victoraraujo.com.br)  
+**Versão:** 0.2.0
+
+---
+
+## 📋 Sobre o Projeto
+
+Este é um portfólio pessoal que showcaseia projetos de desenvolvimento front-end, incluindo aplicações com Vue.js, React e Next.js. O design é limpo, responsivo e otimizado para performance.
+
+### ✨ Destaques
+
+- 🎨 Animações suaves com Framer Motion
+- 📱 Design 100% responsivo
+- ⚡ Otimizado para performance com Next.js
+- 🎯 SEO-friendly com metadados
+- 🔤 Tipagem TypeScript completa
+- 🎪 Componentes reutilizáveis com CSS Modules
+
+---
+
+## 🚀 Stack Tecnológico
+
+| Tecnologia     | Versão |
+| -------------- | ------ |
+| Next.js        | 15.2.4 |
+| React          | 19.1.0 |
+| TypeScript     | 5.8.2  |
+| Framer Motion  | 12.6.2 |
+| Radix UI Icons | 1.3.2  |
+
+---
+
+## 🛠️ Como Usar
+
+### Instalação
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Com pnpm (recomendado)
+pnpm install
+
+# Ou com npm
+npm install
+
+# Ou com yarn
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Desenvolvimento
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Build para Produção
 
-## Learn More
+```bash
+pnpm build
+pnpm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estrutura do Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+src/
+├── app/                    # App Router (Next.js 13+)
+│   ├── layout.tsx         # Layout raiz
+│   ├── page.tsx           # Home - galeria de projetos
+│   ├── globals.css        # Estilos globais
+│   ├── about/             # Página sobre
+│   └── app/[id]/          # Rotas dinâmicas dos projetos
+│
+├── components/            # Componentes reutilizáveis
+│   ├── Card/              # Cards da galeria
+│   ├── CardApp/           # Detalhe de projeto
+│   ├── Header/            # Navegação
+│   ├── Footer/            # Rodapé
+│   ├── Social/            # Links sociais
+│   └── Title/             # Componentes de título animados
+│
+└── data/
+    └── appData.ts        # Dados dos projetos
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Projetos Apresentados
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **PokeAgenda** - Pokédex com Vue 3 + TypeScript
+2. **LOLzinho** - Wiki de campeões League of Legends
+3. **ReceitasTop** - Calculadora de preços de receitas
+4. **Anime Top** - Buscador de animes com Next.js + Tailwind
+
+---
+
+## 🎨 Componentes Principais
+
+- **Card** - Componente que exibe cada projeto
+- **Header** - Navegação principal
+- **Footer** - Rodapé com links
+- **Social** - Ícones de redes sociais
+- **Title** - Título animado com efeitos de texto
+- **AnimeText** - Texto com animação
+- **CursorBlinker** - Cursor piscante animado
+
+---
+
+## ✅ Scripts Disponíveis
+
+```bash
+pnpm dev       # Inicia servidor de desenvolvimento
+pnpm build     # Cria build otimizado
+pnpm start     # Inicia servidor de produção
+```
+
+---
+
+## 📚 Documentação Adicional
+
+Para mais detalhes sobre a arquitetura, padrões de código e funcionalidades, consulte [agent.md](./agent.md).
+
+---
+
+## 🌐 Deploy
+
+Disponível em **Vercel** e em **produção em** [victoraraujo.com.br](http://victoraraujo.com.br)
+
+### Para fazer deploy na Vercel:
+
+1. Push seu código para um repositório Git
+2. Conecte ao Vercel
+3. Vercel detectará Next.js automaticamente e fará deploy
+
+---
+
+## 📖 Links Úteis
+
+- [Documentação Next.js](https://nextjs.org/docs)
+- [Documentação React 19](https://react.dev)
+- [Framer Motion Docs](https://www.framer.com/motion/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+**Victor Araújo** - Front-end Developer  
+[victoraraujo.com.br](http://victoraraujo.com.br)
+
+---
+
+## 📄 Licença
+
+Este projeto é pessoal e está disponível para fins de portfólio.
+
+---
+
+**Última atualização:** Fevereiro de 2026

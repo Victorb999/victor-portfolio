@@ -1,0 +1,314 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: linear-gradient(180deg,
+      rgba(5, 4, 16, 0.95) 0%,
+      rgba(49, 27, 99, 0.85) 100%);
+  /*backdrop-filter: blur(10px);*/
+  border-right: 2px solid var(--purple);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 4px 0 20px rgba(49, 27, 99, 0.3);
+}
+
+/* Profile Section */
+.profile {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(139, 162, 174, 0.2);
+  padding-bottom: 1.5rem;
+}
+
+.profileIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: "Courier New", monospace;
+}
+
+.prompt {
+  color: var(--red);
+  font-weight: bold;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.username {
+  color: var(--blue);
+}
+
+/* Navigation Section */
+.navigation {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 1rem;
+}
+
+.navSection {
+  margin-bottom: 2rem;
+}
+
+.navTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  padding: 0 0.5rem;
+  font-family: "Courier New", monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.projectList,
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.projectItem {
+  position: relative;
+}
+
+.projectLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid transparent;
+}
+
+.projectLink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--blue);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.projectLink:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg-image);
+  transform: translateX(4px);
+  border-color: rgba(47, 82, 224, 0.3);
+  color: #f8f9fa;
+}
+
+.projectLink:hover::before {
+  transform: scaleY(1);
+}
+
+.projectLogo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.projectLink:hover .projectLogo {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(47, 82, 224, 0.5));
+}
+
+.projectName {
+  font-size: 0.95rem;
+  font-weight: bold;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.navList {
+  list-style: none;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navLink:hover {
+  background: rgba(47, 82, 224, 0.15);
+  transform: translateX(4px);
+  color: #f8f9fa;
+}
+
+.navIcon {
+  font-size: 1.25rem;
+}
+
+/* Social Section */
+.social {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(139, 162, 174, 0.2);
+}
+
+.socialTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  font-family: "Courier New", monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(47, 82, 224, 0.1);
+  border: 1px solid rgba(47, 82, 224, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: var(--white);
+}
+
+.socialLink:hover {
+  background: rgba(47, 82, 224, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(47, 82, 224, 0.4);
+  color: #f8f9fa;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 1001;
+  background: rgba(5, 4, 16, 0.9);
+  border: 2px solid var(--purple);
+  border-radius: 8px;
+  padding: 0.75rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(49, 27, 99, 0.9);
+  box-shadow: 0 0 15px rgba(49, 27, 99, 0.5);
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 4, 16, 0.8);
+  z-index: 999;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .overlay {
+    display: block;
+  }
+}
+
+/* Scrollbar Styling */
+.navigation::-webkit-scrollbar {
+  width: 6px;
+}
+
+.navigation::-webkit-scrollbar-track {
+  background: rgba(5, 4, 16, 0.3);
+  border-radius: 3px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 3px;
+}
+
+.navigation::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}

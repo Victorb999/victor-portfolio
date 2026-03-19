@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import styles from "./styles.module.css";
-const cursorVariants = {
+const cursorVariants: Variants = {
   blinking: {
     opacity: [0, 0, 1, 1],
     transition: {

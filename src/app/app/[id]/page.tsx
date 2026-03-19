@@ -21,7 +21,10 @@ export default function appPage(props: AppProps) {
   }
 
   return (
-    <div className={styles.all}>
+    <div
+      className={styles.all}
+      style={{ '--bg-image': `url(${dataApp.img})` } as React.CSSProperties}
+    >
       <CardApp>
         <div className={styles.container}>
           <div className={styles.content}>

@@ -1,0 +1,132 @@
+.terminal {
+    background: rgba(5, 4, 16, 0.9);
+    border: 2px solid var(--purple);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(49, 27, 99, 0.4);
+    backdrop-filter: blur(10px);
+    font-family: "Courier New", Courier, monospace;
+    margin: 2rem 0;
+    transition: all 0.3s ease;
+    min-height: 400px;
+    width: 600px;
+}
+
+.terminal:hover {
+    box-shadow: 0 12px 40px rgba(49, 27, 99, 0.6);
+    transform: translateY(-2px);
+}
+
+.terminalHeader {
+    background: linear-gradient(90deg,
+            rgba(49, 27, 99, 0.8) 0%,
+            rgba(51, 50, 77, 0.8) 100%);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(139, 162, 174, 0.2);
+}
+
+.terminalButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.terminalButton {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close {
+    background: #df3335;
+}
+
+.minimize {
+    background: #f4bf4f;
+}
+
+.maximize {
+    background: #61c554;
+}
+
+.terminalButton:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px currentColor;
+}
+
+.terminalTitle {
+    color: var(--gray);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.terminalBody {
+    padding: 1.5rem;
+    min-height: 150px;
+    color: var(--white);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.terminalLine {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt {
+    color: var(--blue);
+    font-weight: bold;
+    user-select: none;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2em;
+    background: var(--white);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terminal {
+        margin: 1rem 0;
+    }
+
+    .terminalBody {
+        padding: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .terminalHeader {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .terminalTitle {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .terminal {
+        width: 100%;
+    }
+}

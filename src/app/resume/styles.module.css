@@ -1,0 +1,280 @@
+.page {
+    width: 100%;
+    max-width: 860px;
+    padding: 2.5rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* ── Header ── */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(49, 27, 99, 0.6);
+    padding-bottom: 1.5rem;
+}
+
+.headerTop {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.02em;
+}
+
+.title {
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.headerMeta {
+    display: flex;
+    gap: 1rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+}
+
+.contactLink {
+    color: var(--blue);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.contactLink:hover {
+    opacity: 0.75;
+    color: var(--blue);
+}
+
+/* ── Section ── */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border-left: 3px solid var(--purple);
+    padding-left: 1.25rem;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.prompt {
+    color: var(--purple);
+    font-weight: 700;
+}
+
+/* ── Summary ── */
+.summary {
+    color: var(--gray);
+    line-height: 1.75;
+    font-size: 0.95rem;
+}
+
+/* ── Skills ── */
+.skillsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.skillGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+@media (min-width: 600px) {
+    .skillGroup {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+.skillGroupLabel {
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    min-width: 130px;
+    padding-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.skillTag {
+    background: rgba(49, 27, 99, 0.55);
+    border: 1px solid rgba(49, 27, 99, 0.9);
+    color: var(--white);
+    font-size: 0.78rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.skillTag:hover {
+    background: rgba(49, 27, 99, 0.85);
+    border-color: var(--blue);
+}
+
+/* ── Experience ── */
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experienceCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(49, 27, 99, 0.4);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.experienceCard:hover {
+    border-color: rgba(49, 27, 99, 0.9);
+    box-shadow: 0 0 18px rgba(49, 27, 99, 0.3);
+}
+
+.jobHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+@media (min-width: 600px) {
+    .jobHeader {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+.jobRole {
+    font-weight: 700;
+    color: var(--white);
+    font-size: 0.95rem;
+}
+
+.jobCompany {
+    color: var(--blue);
+    font-size: 0.95rem;
+}
+
+.jobType {
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+.jobPeriod {
+    color: var(--gray);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.jobBullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.jobBullet {
+    display: flex;
+    gap: 0.6rem;
+    color: var(--gray);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.bulletDot {
+    color: var(--purple);
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+}
+
+/* ── Education ── */
+.eduGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.eduItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+@media (min-width: 600px) {
+    .eduItem {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: baseline;
+    }
+}
+
+.eduLabel {
+    font-size: 0.8rem;
+    color: var(--gray);
+    letter-spacing: 0.04em;
+    min-width: 130px;
+    flex-shrink: 0;
+}
+
+.eduValue {
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+    .page {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+}

@@ -1,6 +1,7 @@
 "use client"
 import styles from "./styles.module.css"
 import { motion, Variants } from "framer-motion"
+import TerminalBlock from "@/components/Terminal/TerminalBlock"
 const variants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -36,10 +37,17 @@ export default function About() {
         initial="hidden"
         animate="visible"
       >
-        I’m a dev since 2012, I already worked with php, asp, vb and .net.
-        Nowdays I’m in love with front end, I make projects using Vuejs and
-        React. I’m a design graphic/UX fan, and I always trying to bring it for
-        my projects.
+        <TerminalBlock
+          lines={[
+            "whoami",
+            "Victorb999",
+            "cat about.txt",
+            "I’m a dev since 2012, originally working with php, asp, vb and .net.",
+            "Nowadays my heart belongs to the Front End: Vuejs, React, Next.js.",
+            "I’m a design graphic/UX enthusiast, always trying to bring nice visuals to my projects."
+          ]}
+          typingSpeed={35}
+        />
       </motion.div>
     </div>
   )
