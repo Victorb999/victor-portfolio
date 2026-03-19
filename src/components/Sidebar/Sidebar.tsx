@@ -30,7 +30,7 @@ export default function Sidebar() {
                 <div className={styles.profile}>
                     <div className={styles.profileIcon}>
                         <span className={styles.prompt}>{">"}</span>
-                        <span className={styles.username}>Victor Araújo</span>
+                        <Link href="/"><span className={styles.username}>Victor Araújo</span></Link>
                     </div>
                 </div>
 
