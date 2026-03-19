@@ -30,7 +30,7 @@ export default function Sidebar() {
                 <div className={styles.profile}>
                     <div className={styles.profileIcon}>
                         <span className={styles.prompt}>{">"}</span>
-                        <span className={styles.username}>victorb999</span>
+                        <span className={styles.username}>Victor Araújo</span>
                     </div>
                 </div>
 
@@ -84,6 +84,16 @@ export default function Sidebar() {
                                 >
                                     <span className={styles.navIcon}>👤</span>
                                     About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/resume"
+                                    className={styles.navLink}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    <span className={styles.navIcon}>📄</span>
+                                    Resume
                                 </Link>
                             </li>
                         </ul>
