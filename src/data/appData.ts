@@ -13,13 +13,13 @@ export const dataApp: dataApp[] = [
   {
     id: 1,
     href: "/app/pokeagenda",
-    imgSrc: "/img/Apps/pokeagenda.jpg",
+    imgSrc: "/img/Apps/PokeAgenda.png",
     layoutId: "pokeagenda-app",
     title: "PokeAgenda",
-    subtitle: "A Pokedex made with vue3 + ts",
+    subtitle: "A Pokedex made with next + graphql + tailwind",
     text: "Search every pokemon, types and generation.",
-    link: "https://pokeagenda-8b318.web.app/",
-    logo: "/img/AppLogos/pokeagenda.png",
+    link: "https://pokemon-ql.vercel.app/",
+    logo: "/img/AppLogos/pokeagenda.svg",
   },
   {
     id: 2,
@@ -90,12 +90,12 @@ export type Apps = {
 export const dataAppPage: Record<string, Apps> = {
   pokeagenda: {
     id: "pokeagenda",
-    img: "/img/Apps/pokeagenda.jpg",
-    github: "https://github.com/Victorb999/PokeAgenda",
+    img: "/img/Apps/PokeAgenda.png",
+    github: "https://github.com/Victorb999/pokemon-ql",
     text: "Search every pokemon, types and generation.",
-    site: "https://pokeagenda-8b318.web.app/",
+    site: "https://pokemon-ql.vercel.app/",
     title: "PokeAgenda",
-    logo: "/img/AppLogos/pokeagenda.png",
+    logo: "/img/AppLogos/pokeagenda.svg",
   },
   lolzinho: {
     id: "lolzinho",
