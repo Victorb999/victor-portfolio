@@ -3,6 +3,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { dataApp } from "../../data/appData"
 import styles from "./Sidebar.module.css"
+import { HomeIcon, PersonIcon, FileTextIcon, CodeIcon, RocketIcon } from "@radix-ui/react-icons"
 
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +30,9 @@ export default function Sidebar() {
                 {/* Top Section - Profile */}
                 <div className={styles.profile}>
                     <div className={styles.profileIcon}>
-                        <span className={styles.prompt}>{">"}</span>
+                        <span className={styles.prompt}>
+                            <PersonIcon width={22} height={22} />
+                        </span>
                         <Link href="/"><span className={styles.username}>Victor Araújo</span></Link>
                     </div>
                 </div>
@@ -38,7 +41,9 @@ export default function Sidebar() {
                 <nav className={styles.navigation}>
                     <div className={styles.navSection}>
                         <h3 className={styles.navTitle}>
-                            <span className={styles.prompt}>$</span> Projects
+                            <span className={styles.prompt}>
+                                <CodeIcon width={22} height={22} />
+                            </span> Projects
                         </h3>
                         <ul className={styles.projectList}>
                             {dataApp.map((project) => (
@@ -63,7 +68,9 @@ export default function Sidebar() {
 
                     <div className={styles.navSection}>
                         <h3 className={styles.navTitle}>
-                            <span className={styles.prompt}>$</span> Navigation
+                            <span className={styles.prompt}>
+                                <RocketIcon width={22} height={22} />
+                            </span> Navigation
                         </h3>
                         <ul className={styles.navList}>
                             <li>
@@ -72,7 +79,7 @@ export default function Sidebar() {
                                     className={styles.navLink}
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    <span className={styles.navIcon}>🏠</span>
+                                    <span className={styles.navIcon}><HomeIcon width={18} height={18} /></span>
                                     Home
                                 </Link>
                             </li>
@@ -82,7 +89,7 @@ export default function Sidebar() {
                                     className={styles.navLink}
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    <span className={styles.navIcon}>👤</span>
+                                    <span className={styles.navIcon}><PersonIcon width={18} height={18} /></span>
                                     About
                                 </Link>
                             </li>
@@ -92,7 +99,7 @@ export default function Sidebar() {
                                     className={styles.navLink}
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    <span className={styles.navIcon}>📄</span>
+                                    <span className={styles.navIcon}><FileTextIcon width={18} height={18} /></span>
                                     Resume
                                 </Link>
                             </li>

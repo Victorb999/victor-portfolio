@@ -1,6 +1,7 @@
 "use client"
 import styles from "./styles.module.css"
 import { motion, Variants } from "framer-motion"
+import { BackpackIcon, GlobeIcon, ChatBubbleIcon } from "@radix-ui/react-icons"
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -58,7 +59,7 @@ const experience = [
         role: "Frontend Technical Lead",
         company: "Visto Tecnologia",
         type: "Remote",
-        period: "Aug 2023 – Present",
+        period: "Aug 2023 – Apr 2026",
         bullets: [
             "Served as the technical reference for 8 developers across two squads, establishing frontend standards and ensuring architectural consistency.",
             "Developed internal tooling that eliminated design-to-development friction, accelerating feature delivery for the engineering team.",
@@ -213,17 +214,17 @@ export default function Resume() {
                 </h2>
                 <div className={styles.eduGrid}>
                     <div className={styles.eduItem}>
-                        <span className={styles.eduLabel}>🎓 Degree</span>
+                        <span className={styles.eduLabel}><BackpackIcon width={16} height={16} /> Degree</span>
                         <span className={styles.eduValue}>
                             Bachelor's in Information Systems — Faminas Faculdade de Minas (2013)
                         </span>
                     </div>
                     <div className={styles.eduItem}>
-                        <span className={styles.eduLabel}>🌎 English</span>
+                        <span className={styles.eduLabel}><GlobeIcon width={16} height={16} /> English</span>
                         <span className={styles.eduValue}>Full Professional Proficiency (Advanced)</span>
                     </div>
                     <div className={styles.eduItem}>
-                        <span className={styles.eduLabel}>🇧🇷 Portuguese</span>
+                        <span className={styles.eduLabel}><ChatBubbleIcon width={16} height={16} /> Portuguese</span>
                         <span className={styles.eduValue}>Native Speaker</span>
                     </div>
                 </div>

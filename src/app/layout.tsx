@@ -15,13 +15,14 @@ const josefin = Josefin_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Victor Araújo - Front end Developer",
+  title: "Victor Araújo - Senior Frontend Engineer",
   authors: [{ name: "Victor Araújo", url: "http://victoraraujo.com.br" }],
-  description: "Victor Araújo is a dev who loves front-end",
+  description: "Senior Frontend Engineer with 10+ years building interfaces that inspire.",
   keywords: [
     "dev",
     "developer",
     "frontend",
+    "senior",
     "vue",
     "vuejs",
     "react",
@@ -29,17 +30,18 @@ export const metadata: Metadata = {
     "next",
     "nextjs",
     "front-end",
+    "typescript",
   ],
   openGraph: {
-    title: "Victor Araújo - Front end Developer",
-    description: "Victor Araújo is a dev who loves front-end",
+    title: "Victor Araújo - Senior Frontend Engineer",
+    description: "Senior Frontend Engineer with 10+ years building interfaces that inspire.",
     url: "http://victoraraujo.com.br",
     siteName: "Victor Araújo",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Victor Araújo - Front end Developer",
-    description: "Victor Araújo is a dev who loves front-end",
+    title: "Victor Araújo - Senior Frontend Engineer",
+    description: "Senior Frontend Engineer with 10+ years building interfaces that inspire.",
   },
   icons: {
     icon: "logo.svg",

@@ -18,6 +18,19 @@ const item: Variants = {
   },
 }
 
+const tagline: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 8.5,
+      ease: "easeOut",
+    },
+  },
+}
+
 const Title: React.FC = () => {
   return (
     <div className={styles.title}>
@@ -28,9 +41,22 @@ const Title: React.FC = () => {
         <div className={styles.titleNameFlex}>
           <AnimeText delay={4} baseText="Araújo" cursor={"END"} />
         </div>
-        <motion.h3 initial="hidden" animate="visible" variants={item}>
-          Front-end developer
+        <motion.h3
+          className={styles.role}
+          initial="hidden"
+          animate="visible"
+          variants={item}
+        >
+          Senior Frontend Engineer
         </motion.h3>
+        <motion.p
+          className={styles.tagline}
+          initial="hidden"
+          animate="visible"
+          variants={tagline}
+        >
+          Building interfaces that inspire.
+        </motion.p>
       </motion.div>
       <Social />
     </div>

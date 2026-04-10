@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link"
 import styles from "./styles.module.css"
-import { useState } from "react"
 import { motion, Variants } from "framer-motion"
 
 const variants: Variants = {
@@ -16,15 +15,14 @@ const variants: Variants = {
   },
 }
 
-const item: Variants = {
-  hidden: { y: -30, opacity: 0 },
+const descVariants: Variants = {
+  hidden: { opacity: 0, y: 10 },
   visible: {
-    y: 0,
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 0.3,
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+      duration: 0.25,
+      staggerChildren: 0.1,
     },
   },
 }
@@ -47,14 +45,13 @@ const Card: React.FC<CardProps> = ({
   subtitle,
   text,
 }) => {
-  const [showDescription, setShowDescription] = useState(false)
   return (
     <Link href={href}>
       <motion.div
         className={styles.card}
         variants={variants}
-        onHoverStart={() => setShowDescription(true)}
-        onHoverEnd={() => setShowDescription(false)}
+        whileHover={{ scale: 1.04, y: -6 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         <div className={styles.image}>
           <motion.img
@@ -63,18 +60,16 @@ const Card: React.FC<CardProps> = ({
             className={styles.imgApp}
           />
         </div>
-        {showDescription && (
-          <motion.div
-            className={styles.description}
-            initial="hidden"
-            animate="visible"
-            variants={item}
-          >
-            <h3>{title}</h3>
-            <h4>{subtitle}</h4>
-            <p>{text}</p>
-          </motion.div>
-        )}
+        <motion.div
+          className={styles.description}
+          initial="hidden"
+          whileHover="visible"
+          variants={descVariants}
+        >
+          <h3>{title}</h3>
+          <h4>{subtitle}</h4>
+          <p>{text}</p>
+        </motion.div>
       </motion.div>
     </Link>
   )

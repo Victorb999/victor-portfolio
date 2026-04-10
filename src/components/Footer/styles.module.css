@@ -1,9 +1,38 @@
 .footer {
   width: 100%;
-  height: 100px;
+  padding: 1.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.text {
+  font-size: 0.8rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.heart {
+  color: var(--red);
+  width: 14px;
+  height: 14px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .footer a {
