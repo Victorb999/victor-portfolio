@@ -58,12 +58,12 @@ const experience = [
     {
         role: "Senior Frontend Developer",
         company: "Stefanini",
-        type: "Client: Vallourec",
+        type: "Hybrid · Client: Vallourec",
         period: "Jul 2026 – Present",
         bullets: [
-            "Build the frontends of industrial systems used in Vallourec plants around the world.",
+            "Build React frontends for industrial systems used in Vallourec plants in Brazil, the US, France, China, Saudi Arabia and Indonesia.",
             "Develop manufacturing automation systems that support daily plant operations.",
-            "Support the international rollout of these systems across Vallourec's global sites.",
+            "Support the international rollout of these systems, including an on-site implementation in China (Sep 2026).",
         ],
     },
     {
