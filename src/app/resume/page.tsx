@@ -56,6 +56,17 @@ const skills = [
 
 const experience = [
     {
+        role: "Senior Frontend Developer",
+        company: "Stefanini",
+        type: "Client: Vallourec",
+        period: "Jul 2026 – Present",
+        bullets: [
+            "Build the frontends of industrial systems used in Vallourec plants around the world.",
+            "Develop manufacturing automation systems that support daily plant operations.",
+            "Support the international rollout of these systems across Vallourec's global sites.",
+        ],
+    },
+    {
         role: "Frontend Technical Lead",
         company: "Visto Tecnologia",
         type: "Remote",
