@@ -52,7 +52,7 @@ const techStack = [
 
 const stats = [
   { value: "10+", label: "Years of Experience" },
-  { value: "Frontend", label: "Technical Lead" },
+  { value: "Tech Lead", label: "8 devs · 2 squads" },
 ]
 
 export default function About() {
@@ -69,7 +69,7 @@ export default function About() {
             damping: 100,
           }}
           src="/img/me.jpeg"
-          alt="Me"
+          alt="Victor Araújo"
           className={styles.img}
         />
         <motion.div
@@ -87,7 +87,7 @@ export default function About() {
               "Victorb999",
               "cat about.txt",
               "I'm a dev since 2012, originally working with php, asp, vb and .net.",
-              "Nowadays my heart belongs to the Front End: Vuejs, React, Next.js.",
+              "Nowadays I build products end to end: React, Next.js, Vue, Node and desktop apps.",
               "I'm a design graphic/UX enthusiast, always trying to bring nice visuals to my projects.",
             ]}
             typingSpeed={35}

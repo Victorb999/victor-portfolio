@@ -21,7 +21,7 @@ export default function AnimeText({ delay, baseText, cursor }: IAnimTextProps) {
     const controls = animate(count, baseText.length, {
       type: "tween",
       delay: delay,
-      duration: 3,
+      duration: baseText.length * 0.07,
       ease: "easeInOut",
       onComplete: () => {
         setDone(true);

@@ -1,12 +1,11 @@
 import type { Metadata } from "next"
 import Footer from "../components/Footer/Footer"
-import Header from "../components/Header/Header"
-import Title from "../components/Title/Title"
 import "./globals.css"
 import styles from "./styles.module.css"
 
 import { Josefin_Sans } from "next/font/google"
 import Sidebar from "@/components/Sidebar/Sidebar"
+import MotionProvider from "@/components/MotionProvider"
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -15,12 +14,15 @@ const josefin = Josefin_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Victor Araújo - Senior Frontend Engineer",
-  authors: [{ name: "Victor Araújo", url: "http://victoraraujo.com.br" }],
-  description: "Senior Frontend Engineer with 10+ years building interfaces that inspire.",
+  metadataBase: new URL("https://www.victoraraujo.com.br"),
+  title: "Victor Araújo - Senior Software Engineer",
+  authors: [{ name: "Victor Araújo", url: "https://www.victoraraujo.com.br" }],
+  description: "Senior Software Engineer with 10+ years building interfaces that inspire.",
   keywords: [
     "dev",
     "developer",
+    "software engineer",
+    "full stack",
     "frontend",
     "senior",
     "vue",
@@ -33,15 +35,15 @@ export const metadata: Metadata = {
     "typescript",
   ],
   openGraph: {
-    title: "Victor Araújo - Senior Frontend Engineer",
-    description: "Senior Frontend Engineer with 10+ years building interfaces that inspire.",
-    url: "http://victoraraujo.com.br",
+    title: "Victor Araújo - Senior Software Engineer",
+    description: "Senior Software Engineer with 10+ years building interfaces that inspire.",
+    url: "https://www.victoraraujo.com.br",
     siteName: "Victor Araújo",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Victor Araújo - Senior Frontend Engineer",
-    description: "Senior Frontend Engineer with 10+ years building interfaces that inspire.",
+    title: "Victor Araújo - Senior Software Engineer",
+    description: "Senior Software Engineer with 10+ years building interfaces that inspire.",
   },
   icons: {
     icon: "logo.svg",
@@ -65,14 +67,13 @@ export default function RootLayout({
         <meta name="robots" content="index, follow"></meta>
       </head>
       <body className={josefin.className}>
-        <div className={styles.header}>
-          <Sidebar />
-          <div className={styles.body}>
-
-            {children}
+        <MotionProvider>
+          <div className={styles.header}>
+            <Sidebar />
+            <div className={styles.body}>{children}</div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
+        </MotionProvider>
       </body>
     </html>
   )

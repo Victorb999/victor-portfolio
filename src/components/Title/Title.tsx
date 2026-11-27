@@ -13,7 +13,7 @@ const item: Variants = {
       duration: 0.3,
       delayChildren: 0.3,
       staggerChildren: 0.2,
-      delay: 7.5,
+      delay: 1.1,
     },
   },
 }
@@ -25,7 +25,7 @@ const tagline: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      delay: 8.5,
+      delay: 1.3,
       ease: "easeOut",
     },
   },
@@ -36,10 +36,10 @@ const Title: React.FC = () => {
     <div className={styles.title}>
       <motion.div className={styles.titleName}>
         <div className={styles.titleNameFlex}>
-          <AnimeText delay={1} baseText="Victor" cursor={"BEGIN"} />
+          <AnimeText delay={0.1} baseText="Victor" cursor={"BEGIN"} />
         </div>
         <div className={styles.titleNameFlex}>
-          <AnimeText delay={4} baseText="Araújo" cursor={"END"} />
+          <AnimeText delay={0.5} baseText="Araújo" cursor={"END"} />
         </div>
         <motion.h3
           className={styles.role}
@@ -47,7 +47,7 @@ const Title: React.FC = () => {
           animate="visible"
           variants={item}
         >
-          Senior Frontend Engineer
+          Senior Software Engineer
         </motion.h3>
         <motion.p
           className={styles.tagline}
@@ -59,6 +59,15 @@ const Title: React.FC = () => {
         </motion.p>
       </motion.div>
       <Social />
+      <motion.a
+        href="mailto:victor.b_@hotmail.com"
+        className={styles.cta}
+        initial="hidden"
+        animate="visible"
+        variants={tagline}
+      >
+        Let&apos;s talk →
+      </motion.a>
     </div>
   )
 }

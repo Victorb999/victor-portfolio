@@ -1,145 +1,88 @@
-interface dataApp {
-  href: string
-  imgSrc: string
-  layoutId: string
+export type Project = {
+  slug: string
   title: string
-  subtitle?: string
+  subtitle: string
   text: string
-  link: string
-  id: number
-  logo?: string
+  tags: string[]
+  cover: string
+  logo: string
+  github: string
+  site: string
+  download?: string
+  featured?: boolean
+  highlights?: string[]
+  screenshots?: string[]
 }
-export const dataApp: dataApp[] = [
+
+export const projects: Project[] = [
   {
-    id: 1,
-    href: "/app/pokeagenda",
-    imgSrc: "/img/Apps/PokeAgenda.png",
-    layoutId: "pokeagenda-app",
-    title: "PokeAgenda",
-    subtitle: "A Pokedex made with next + graphql + tailwind",
-    text: "Search every pokemon, types and generation.",
-    link: "https://pokemon-ql.vercel.app/",
-    logo: "/img/AppLogos/pokeagenda.svg",
+    slug: "nextcm",
+    title: "NextCM",
+    subtitle: "Desktop football manager · Tauri + React",
+    text: "A fan-made tribute to a classic early-2000s football management game, rebuilt from scratch as a modern desktop app with an up-to-date 2025/26 database.",
+    tags: ["React 19", "TypeScript", "Tauri 2", "Rust", "SQLite"],
+    cover: "/img/Apps/nextcm/mockup.webp",
+    logo: "/img/AppLogos/nextcm.svg",
+    github: "https://github.com/Victorb999/NextCm",
+    site: "https://victorb999.github.io/NextCm/",
+    download: "https://github.com/Victorb999/NextCm/releases",
+    featured: true,
+    highlights: [
+      "Desktop app built with Tauri 2: a dense, keyboard-fast React 19 + TypeScript UI over a native simulation core.",
+      "A playable world in SQLite: 144k+ people, 11k clubs and 400 competitions, with leagues from Brazil to Europe.",
+      "Live match day with minute-by-minute commentary, drag-and-drop tactics, transfer market with AI-driven clubs, scouting, press conferences and save games.",
+      "Deterministic simulation: the same seed always produces the same season, which makes the game rules testable.",
+      "Built with AI-assisted, context-driven development, documented with project guides, roadmap and changelog.",
+    ],
+    screenshots: [
+      "/img/Apps/nextcm/partida.png",
+      "/img/Apps/nextcm/tacticas.png",
+      "/img/Apps/nextcm/plantel.png",
+      "/img/Apps/nextcm/classificacao.png",
+    ],
   },
   {
-    id: 2,
-    href: "/app/lolzinho",
-    imgSrc: "/img/Apps/lolzinho.jpg",
-    layoutId: "lolzinho-app",
-    title: "LOLzinho",
-    subtitle: "A wiki lol champions made with vue + vuetify",
-    text: "Search all champions of League of legends",
-    link: "https://lol-zinho.victorb999.vercel.app",
-    logo: "/img/AppLogos/lolzinho.svg",
-  },
-  {
-    id: 3,
-    href: "/app/receitastop",
-    imgSrc: "/img/Apps/receitastop.jpg",
-    layoutId: "receitastop-app",
-    title: "ReceitasTop",
-    text: "A project to calculate prices of recipe",
-    link: "https://receitastop.vercel.app",
-    logo: "/img/AppLogos/receitastop.svg",
-  },
-  {
-    id: 4,
-    href: "/app/animetop",
-    imgSrc: "/img/Apps/animetop.jpg",
-    layoutId: "animetop-app",
-    title: "Anime Top",
-    subtitle: "Project in Nextjs 13 + Tailwind + Zustand",
-    text: "Search animes as filtered by title or genre",
-    link: "https://anime-top-gray.vercel.app/",
-    logo: "/img/AppLogos/animetop.svg",
-  },
-  {
-    id: 5,
-    href: "/app/projetolojatop",
-    imgSrc: "/img/Apps/projetoLoja.png",
-    layoutId: "projeto-loja-top",
+    slug: "projetolojatop",
     title: "Loja Top",
-    subtitle: "Project full stack in Nextjs 14 + Node + Prisma",
-    text: "Create products, customers and orders",
-    link: "https://projeto-loja-top.vercel.app/",
+    subtitle: "Full stack store manager",
+    text: "Create and manage products, customers and orders.",
+    tags: ["Next.js 14", "Node", "Prisma", "Tailwind"],
+    cover: "/img/Apps/projetoLoja.png",
     logo: "/img/AppLogos/projetolojatop.svg",
+    github: "https://github.com/Victorb999/projeto-loja-top",
+    site: "https://projeto-loja-top.vercel.app/",
   },
   {
-    id: 6,
-    href: "/app/yugitop",
-    imgSrc: "/img/Apps/yugitop.png",
-    layoutId: "yugitop",
-    title: "YugiTop.",
-    subtitle: "Project in react + vite + tailwind",
-    text: "Search yugioh cards",
-    link: "https://yugi-cards-top.vercel.app/",
-    logo: "/img/AppLogos/yugi.png",
+    slug: "receitastop",
+    title: "ReceitasTop",
+    subtitle: "Recipe cost calculator",
+    text: "Calculate the cost of a recipe from the price of its ingredients.",
+    tags: ["Vue 3", "TypeScript", "SCSS"],
+    cover: "/img/Apps/receitastop.jpg",
+    logo: "/img/AppLogos/receitastop.svg",
+    github: "https://github.com/Victorb999/ReceitasTopFront",
+    site: "https://receitastop.vercel.app",
+  },
+  {
+    slug: "pokeagenda",
+    title: "PokeAgenda",
+    subtitle: "Pokédex with GraphQL",
+    text: "Search every Pokémon by name, type and generation.",
+    tags: ["Next.js", "GraphQL", "Tailwind"],
+    cover: "/img/Apps/PokeAgenda.png",
+    logo: "/img/AppLogos/pokeagenda.svg",
+    github: "https://github.com/Victorb999/pokemon-ql",
+    site: "https://pokemon-ql.vercel.app/",
+  },
+  {
+    slug: "animetop",
+    title: "Anime Top",
+    subtitle: "Anime catalog",
+    text: "Search animes filtered by title or genre.",
+    tags: ["Next.js 13", "Tailwind", "Zustand"],
+    cover: "/img/Apps/animetop.jpg",
+    logo: "/img/AppLogos/animetop.svg",
+    github: "https://github.com/Victorb999/anime-top",
+    site: "https://anime-top-gray.vercel.app/",
   },
 ]
-
-export type Apps = {
-  id: string
-  img: string
-  github: string
-  text: string
-  site: string
-  title: string
-  logo?: string
-}
-
-export const dataAppPage: Record<string, Apps> = {
-  pokeagenda: {
-    id: "pokeagenda",
-    img: "/img/Apps/PokeAgenda.png",
-    github: "https://github.com/Victorb999/pokemon-ql",
-    text: "Search every pokemon, types and generation.",
-    site: "https://pokemon-ql.vercel.app/",
-    title: "PokeAgenda",
-    logo: "/img/AppLogos/pokeagenda.svg",
-  },
-  lolzinho: {
-    id: "lolzinho",
-    img: "/img/Apps/lolzinho.jpg",
-    github: "https://github.com/Victorb999/LOLzinho",
-    text: "Search all champions of League of legends",
-    site: "https://lol-zinho.victorb999.vercel.app",
-    title: "LOLzinho",
-    logo: "/img/AppLogos/lolzinho.svg",
-  },
-  receitastop: {
-    id: "receitastop",
-    img: "/img/Apps/receitastop.jpg",
-    github: "https://github.com/Victorb999/ReceitasTopFront",
-    text: "A project to calculate prices of recipe",
-    site: "https://receitastop.vercel.app",
-    title: "ReceitasTop",
-    logo: "/img/AppLogos/receitastop.svg",
-  },
-  animetop: {
-    id: "animetop",
-    img: "/img/Apps/animetop.jpg",
-    github: "https://github.com/Victorb999/anime-top",
-    text: "Project in Nextjs 13 + Tailwind + Zustand",
-    site: "https://anime-top-gray.vercel.app/",
-    title: "Anime Top",
-    logo: "/img/AppLogos/animetop.svg",
-  },
-  projetolojatop: {
-    id: "projetolojatop",
-    img: "/img/Apps/projetoLoja.png",
-    github: "https://github.com/Victorb999/projeto-loja-top",
-    text: "Project in Nextjs 14 + Tailwind + Node + Prisma",
-    site: "https://projeto-loja-top.vercel.app/",
-    title: "Loja Top",
-    logo: "/img/AppLogos/projetolojatop.svg",
-  },
-  yugitop: {
-    id: "yugitop",
-    img: "/img/Apps/yugitop.png",
-    github: "https://github.com/Victorb999/YugiCardsTop",
-    text: "Search Yu GI OH cards",
-    site: "https://yugi-cards-top.vercel.app/",
-    title: "YugiTop",
-    logo: "/img/AppLogos/yugi.png",
-  },
-}

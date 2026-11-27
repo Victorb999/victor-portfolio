@@ -16,6 +16,7 @@ const Social: React.FC = () => {
         href="https://www.github.com/victorb999"
         title="github"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <Image
           alt={"github"}
@@ -35,6 +36,7 @@ const Social: React.FC = () => {
         href="https://www.linkedin.com/in/victorb-araujo/"
         title="linkedin"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <Image
           alt={"linkedin"}
@@ -54,6 +56,7 @@ const Social: React.FC = () => {
         href="https://www.behance.net/victorAraujoDesign"
         title="behance"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <Image
           alt={"behance"}
