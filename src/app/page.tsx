@@ -1,29 +1,10 @@
 "use client"
 import styles from "./styles.module.css"
 import Card from "../components/Card/Card"
-import { dataApp } from "../data/appData"
+import { projects } from "../data/appData"
 
-import { motion, Variants } from "framer-motion"
+import { motion } from "framer-motion"
 import Title from "@/components/Title/Title"
-
-const variants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.25,
-      staggerChildren: 0.5,
-    },
-  },
-}
-
-const item: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-}
 
 export default function Home() {
   return (
@@ -33,21 +14,12 @@ export default function Home() {
         <main className={styles.main2}>
           <motion.div
             className={styles.grid}
-            variants={variants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
-            {dataApp.map((card) => (
-              <Card
-                key={card.id}
-                href={card.href}
-                imgSrc={card.imgSrc}
-                layoutId={card.layoutId}
-                title={card.title}
-                subtitle={card.subtitle}
-                text={card.text}
-                link={card.link}
-              />
+            {projects.map((project) => (
+              <Card key={project.slug} project={project} />
             ))}
           </motion.div>
         </main>

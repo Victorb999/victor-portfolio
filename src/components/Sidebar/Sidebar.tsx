@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import { dataApp } from "../../data/appData"
+import { projects } from "../../data/appData"
 import styles from "./Sidebar.module.css"
 import { HomeIcon, PersonIcon, FileTextIcon, CodeIcon, RocketIcon } from "@radix-ui/react-icons"
 
@@ -46,13 +46,13 @@ export default function Sidebar() {
                             </span> Projects
                         </h3>
                         <ul className={styles.projectList}>
-                            {dataApp.map((project) => (
-                                <li key={project.id} className={styles.projectItem}>
+                            {projects.map((project) => (
+                                <li key={project.slug} className={styles.projectItem}>
                                     <Link
-                                        href={project.href}
+                                        href={`/app/${project.slug}`}
                                         className={styles.projectLink}
                                         onClick={() => setIsOpen(false)}
-                                        style={{ '--bg-image': `url(${project.imgSrc})` } as React.CSSProperties}
+                                        style={{ '--bg-image': `url(${project.cover})` } as React.CSSProperties}
                                     >
                                         <img
                                             src={project.logo}
@@ -125,7 +125,7 @@ export default function Sidebar() {
                             </svg>
                         </a>
                         <a
-                            href="https://linkedin.com/in/victorb999"
+                            href="https://www.linkedin.com/in/victorb-araujo/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.socialLink}

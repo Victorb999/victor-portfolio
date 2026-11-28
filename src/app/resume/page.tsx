@@ -56,6 +56,17 @@ const skills = [
 
 const experience = [
     {
+        role: "Senior Frontend Developer",
+        company: "Stefanini",
+        type: "Hybrid · Client: Vallourec",
+        period: "Jul 2026 – Present",
+        bullets: [
+            "Build React frontends for industrial systems used in Vallourec plants in Brazil, the US, France, China, Saudi Arabia and Indonesia.",
+            "Develop manufacturing automation systems that support daily plant operations.",
+            "Support the international rollout of these systems, including an on-site implementation in China (Sep 2026).",
+        ],
+    },
+    {
         role: "Frontend Technical Lead",
         company: "Visto Tecnologia",
         type: "Remote",
@@ -112,7 +123,7 @@ export default function Resume() {
             <motion.header className={styles.header} variants={sectionVariants}>
                 <div className={styles.headerTop}>
                     <h1 className={styles.name}>Victor Araújo</h1>
-                    <span className={styles.title}>Senior Frontend Engineer</span>
+                    <span className={styles.title}>Senior Software Engineer</span>
                 </div>
                 <div className={styles.headerMeta}>
                     <span className={styles.metaItem}>
@@ -146,7 +157,7 @@ export default function Resume() {
                     <span className={styles.prompt}>~</span> Summary
                 </h2>
                 <p className={styles.summary}>
-                    Senior Frontend Engineer with 10+ years of experience architecting scalable web
+                    Senior Software Engineer with 10+ years of experience architecting scalable web
                     applications and high-performance user interfaces. Expert in React, TypeScript, and
                     modern frontend ecosystems, with a proven track record of leading technical initiatives,
                     modernizing legacy systems, and mentoring cross-functional teams in remote environments.
